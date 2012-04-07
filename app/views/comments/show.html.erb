@@ -5,6 +5,14 @@
   <%= @comment.description %>
 </p>
 
+<p>
+  <b>Name:</b>
+  <%= @comment.name %>
+</p>
+
+
+
+
 
 <%= link_to 'Edit', edit_page_comment_path(@page, @comment) %> |
 <%= link_to 'Back', page_path(@page) %>

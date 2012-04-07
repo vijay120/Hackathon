@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120407095151) do
+ActiveRecord::Schema.define(:version => 20120407101835) do
 
   create_table "comments", :force => true do |t|
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "page_id"
+    t.string   "name"
   end
 
   create_table "pages", :force => true do |t|
