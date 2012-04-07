@@ -7,8 +7,8 @@ Hackathon::Application.routes.draw do
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-  match '/:dorm/:floor' => 'room#floor'
-  match '/:dorm/:floor/:number' => 'room#room'
+  match '/:dorm/:floor' => 'pages#floor'
+  match '/:dorm/:floor/:number' => 'pages#room'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

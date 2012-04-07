@@ -1,4 +1,20 @@
 class PagesController < ApplicationController
+    def floor
+        #image file of specific dorm
+        name = params[:dorm] + params[:floor]
+        @floor_plan =  name + '.jpg'
+        # @floor_plan = 'floorplan.png'
+        render name
+    end
+
+    
+    def room
+        @dorm = params[:dorm]
+        @number = params[:number]
+
+        # @room = Room.find_by_
+
+    end
   # GET /pages
   # GET /pages.json
   def index
