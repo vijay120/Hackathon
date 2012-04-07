@@ -1,5 +1,5 @@
 class AddCapacityToRoom < ActiveRecord::Migration
   def change
-    add_column :rooms, :capacity, :integer
+    add_column :pages, :capacity, :integer
   end
 end
