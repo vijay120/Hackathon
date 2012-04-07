@@ -3,8 +3,9 @@
 <table>
 <% @page.comments.each do |comment| %>
   <tr>
-    <td><%= link_to comment.description, [@page, comment] %></td>
-	<td><%= link_to 'Edit', edit_page_comment_path(@page, comment) %></td>
+    <td><%= comment.description%></td>
+    <td><%="                  "%></td>
+	<td><%= comment.name %></td>
 	<td><%= link_to 'Destroy', [@page, comment], method: :delete%></td>
   </tr>
 <% end %>
