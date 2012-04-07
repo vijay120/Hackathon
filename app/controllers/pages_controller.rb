@@ -14,6 +14,7 @@ class PagesController < ApplicationController
 
         @page = (Page.where(:dormName => @dorm, :roomNumber => @number))[0]
         @capacity = @page.capacity
+        @user = @page.users[0]
     end
   # GET /pages
   # GET /pages.json
