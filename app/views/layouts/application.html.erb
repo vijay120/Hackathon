@@ -1,12 +1,47 @@
 <!DOCTYPE html>
+
 <html>
 <head>
   <title>Hackathon</title>
   <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag "nav" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
+
+    <!-- hmc icon goes here -->
+<!-- <h1><img src="/profile/CSS/dropdown/transitional/themes/flickr.com/images/icon.png" alt="hmc" /> Ultimate Horizontal Drop-Down Menu Demo</h1> -->
+
+
 <body>
+    <ul id="menu">
+    <!-- <h1><%= image_tag 'HMC_logo.png', :size => '203x132', :id => 'nav' %> HMC Room Draw</h1> -->
+  <li><a href="">Home</a></li>
+  <li><a href="">Atwood</a>
+    <ul> 
+    <li><a href="">Ground floor</a></li>
+    <li><a href="">History</a></li>
+    <li><a href="">Vision</a></li>
+    </ul>
+  </li>
+  <li><a href="">Products</a>
+    <ul>
+    <li><a href="">Cozy Couch</a></li>
+    <li><a href="">Great Table</a></li>
+    <li><a href="">Small Chair</a></li>
+    <li><a href="">Shiny Shelf</a></li>
+    <li><a href="">Invisible Nothing</a></li>
+    </ul>
+  </li>
+  <li><a href="">Contact</a>
+    <ul>
+    <li><a href="">Online</a></li>
+    <li><a href="">Right Here</a></li>
+    <li><a href="">Somewhere Else</a></li>
+    </ul>
+  </li>
+</ul>
 
 <%= yield %>
 
