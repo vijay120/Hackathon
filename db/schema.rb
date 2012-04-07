@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120407061355) do
+ActiveRecord::Schema.define(:version => 20120407095151) do
 
   create_table "comments", :force => true do |t|
     t.string   "description"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20120407061355) do
     t.string   "roomNumber"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "capacity"
   end
 
   create_table "users", :force => true do |t|
@@ -32,10 +33,10 @@ ActiveRecord::Schema.define(:version => 20120407061355) do
     t.string   "lastName"
     t.string   "account"
     t.string   "roomDrawNumber"
-    t.string   "roomNumber"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "page_id"
   end
 
 end

@@ -10,8 +10,16 @@
   <%= @page.roomNumber %>
 </p>
 
+<p>
+  <b>Capacity:</b>
+  <%= @page.capacity %>
+</p>
+
 
 <%= link_to 'Edit', edit_page_path(@page) %> |
 <%= link_to 'Back', pages_path %>
 
+
+<%= render 'users/index'%>
 <%= render 'comments/index'%>
+

@@ -82,7 +82,7 @@ class CommentsController < ApplicationController
       @comment.destroy
 
       respond_to do |format|
-        format.html { redirect_to user_path(@page) }
+        format.html { redirect_to page_path(@page) }
         format.json { head :ok }
       end
     end
