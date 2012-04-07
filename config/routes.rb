@@ -1,5 +1,4 @@
 Hackathon::Application.routes.draw do
-
   resources :pages do 
     resources :comments
     resources :users

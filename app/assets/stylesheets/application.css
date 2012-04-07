@@ -5,6 +5,9 @@
  *= require_self
  *= require_tree . 
 */
+html {
+    background-color :black;
+}
 
 .all {
     width: 100;
