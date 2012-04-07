@@ -12,8 +12,8 @@ class PagesController < ApplicationController
         @dorm = params[:dorm]
         @number = params[:number]
 
-        # @room = Room.find_by_
-
+        @page = (Page.where(:dormName => @dorm, :roomNumber => @number))[0]
+        @capacity = @page.capacity
     end
   # GET /pages
   # GET /pages.json

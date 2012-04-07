@@ -1,1 +1,23 @@
-Placeholder for room
+<p id="notice"><%= notice %></p>
+
+
+<table border="1" bordercolor="#000000" style="background-color:#BC9A6A; color: black; margin-left: 480px" width="400" cellpadding="3" cellspacing="3">
+    <tr>
+        <td>Dorm</td>
+        <td><%= @page.dormName %></td>
+    </tr>
+    <tr>
+        <td>Room number</td>
+        <td><%=@page.roomNumber%></td>
+    </tr>
+    <tr>
+        <td>Capacity</td>
+        <td><%= @page.capacity%></td>
+    </tr>
+</table>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>
+
+
+
