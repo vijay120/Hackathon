@@ -1,4 +1,10 @@
 Hackathon::Application.routes.draw do
+
+  resources :pages do 
+    resources :comments
+    resources :users
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
