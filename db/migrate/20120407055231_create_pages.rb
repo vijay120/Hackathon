@@ -1,6 +1,6 @@
-class CreatePages < ActiveRecord::Migration
+class CreateRooms < ActiveRecord::Migration
   def change
-    create_table :pages do |t|
+    create_table :rooms do |t|
       t.string :dormName
       t.string :roomNumber
 

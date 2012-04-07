@@ -10,8 +10,19 @@ class RoomController < ApplicationController
     
     def room
         @dorm = params[:dorm]
-        @floor = params[:floor]
-        @room = params[:room]
+        @number = params[:number]
+
+        @room = Room.find_by_
+
     end
+
+  def show
+    @page = Page.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @page }
+    end
+  end
 
 end
