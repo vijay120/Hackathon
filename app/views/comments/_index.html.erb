@@ -1,0 +1,19 @@
+<h2>Listing Comments</h2>
+
+<table>
+<% @page.comments.each do |comment| %>
+  <tr>
+    <td><%= link_to comment.description, [@page, comment] %></td>
+	<td><%= link_to 'Edit', edit_page_comment_path(@page, comment) %></td>
+	<td><%= link_to 'Destroy', [@page, comment], method: :delete%></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Comment', new_page_comment_path(@page) %>
+
+<br><br>
+
+<table>

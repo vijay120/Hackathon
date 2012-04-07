@@ -1,0 +1,107 @@
+* { padding: 10px; margin: 10px; outline: 10 px; }
+body {
+	background: #e8eae1;
+	font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #010101;
+	padding-bottom: 10px;
+}
+
+
+.header{
+    position: relative;
+    float: left;
+    left: 90px;
+    width: 1000px;
+    background-color: #f4f4f4
+}
+.wrapper{
+    position: relative;
+    float: left;
+    left: 90px;
+    width: 1000px;
+    background-color: #cccccc
+}
+.left1{
+    position: relative;
+    float: left;
+    left: 10px;
+    width: 200px;
+    background-color: #ccccff
+}
+.left2{
+    position: relative;
+    float: left;
+    left: 30px;
+    width: 200px;
+    background-color: #ccccff
+}
+.left3{
+    position: relative;
+    float: left;
+    left: 50px;
+    width: 200px;
+    background-color: #ccccff
+}
+
+.left4{
+    position: relative;
+    float: left;
+    left: 50px;
+    width: 200px;
+    background-color: #ccccff
+    
+}
+
+
+
+.right1{
+    position: relative;
+    float: left;
+    left: 10px;
+    width: 200px;
+    background-color: #ccccff
+}
+
+.right2{
+    position: relative;
+    float: left;
+    left: 30px;
+    width: 200px;
+    background-color: #ccccff
+}
+.right3{
+    position: relative;
+    float: left;
+    left: 50px;
+    width: 200px;
+    background-color: #ccccff
+}
+.right4{
+    position: relative;
+    float: left;
+    left: 50px;
+    width: 200px;
+    background-color: #ccccff
+}
+
+
+
+
+.footer{
+    position: relative;
+    float: left;
+    left: 90px;
+    width: 1000px;
+    background-color: #cfcfcf
+}
+body {
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 90%;
+    background-color: #e7e7de
+}
+
+
