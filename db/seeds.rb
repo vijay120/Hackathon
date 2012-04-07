@@ -94,20 +94,53 @@ atwood	325	1
 atwood	327	2"
 
 
+students =
+"Sean Campbell 99999999 1
+Super Man 12345678 2
+Pac Man 88888888 3
+Donald Duck 77777777 4
+Jason Bourne 55555555 5
+Darth Vader 44444444 6
+Hector Zaroni 33333333 7
+Irene Adler 22222222 8
+Sherlock Holmes 11111111 9
+James Bond 00000000 10
+Jon Snow 66666666 11
+Tyrion Lannister 45454545 12
+Spartacus Spartacus 32323232 13
+Vijay Ramikrishnan 45675433 14
+Arya Stark 78438744 15
+Campbell Soup 54321345 17
+Elton John 40123456 16
+Dexter Morgan 56434543 18
+Wily Coyote 67545600 19
+Alfred Tenyson 33333339 20
+Luke Skywalker 42042042 123
+Fantastic Four 75647473 124
+Julius Caesar 69696969 125
+Fluffy Campbell 54323456 126
+Ned Stark56789003 127
+Daffy Duck 21345333 1222
+Mr Steel 94839393 154
+John Galt 54322225 167
+Princess Diane 50505050 189
+Pertinacious Polly 60606060 198
+Pathetic Pete 70707070 1211
+Personable Pablo 23456744 155
+Kuma Puma 80808080 1321
+The Joker 21212121 1666
+Pretty Pony 32322323 1777"
+
+
 string.each_line {|s| 
   building, number, capacity = s.chomp.split(" ")
   Page.create!(:dormName => building, :roomNumber => number, :capacity => capacity)}
-
-
-#
-#while $i < $num  do
-#   puts myFile.readline 
-#   puts $i
-#   building, number, capacity = myFile.readline.chomp.split(" ")
-#   Page.create!(:dormName => building, :roomNumber => number, :capacity => capacity)
-#   $i +=1;
-#end
-
+  
+@counter = 10
+students.each_line {|s| 
+  firstName, lastName, account, roomDrawNumber = s.chomp.split(" ")
+  User.create!(:firstName => firstName, :lastName => lastName, :account => account, :roomDrawNumber => roomDrawNumber, :page_id => @counter)
+  @counter = @counter +1}
 
     
     
