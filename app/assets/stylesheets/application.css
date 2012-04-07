@@ -5,3 +5,34 @@
  *= require_self
  *= require_tree . 
 */
+
+.all {
+    width: 100;
+    background-color : black;
+    text-align: center;
+    color: rgb(188,154,106);
+    /*!important;*/
+}
+
+body {
+    /*background-color :red ;*/
+}
+#dorms-menu {
+    margin-left:480px;
+    /*background-color : black;*/
+    /*border-radius: 20px;*/
+    padding-bottom:200px;
+}
+
+area {
+    background-color:rgba(255,0,0,0.5);
+}
+
+#pull {
+    color : white;
+    font-size : 25;
+}
+
+.map {
+
+}

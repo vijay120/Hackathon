@@ -7,43 +7,69 @@
   <%= stylesheet_link_tag "nav" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js' %>
 </head>
-
     <!-- hmc icon goes here -->
 <!-- <h1><img src="/profile/CSS/dropdown/transitional/themes/flickr.com/images/icon.png" alt="hmc" /> Ultimate Horizontal Drop-Down Menu Demo</h1> -->
 
 
 <body>
+<div class=all>
+      <h1><%= image_tag 'HMC_logo.png', :size => '203x132', :id => 'nav' %> HMC Room Draw</h1>
+  <div id="dorms-menu">
+    
     <ul id="menu">
-    <!-- <h1><%= image_tag 'HMC_logo.png', :size => '203x132', :id => 'nav' %> HMC Room Draw</h1> -->
-  <li><a href="">Home</a></li>
-  <li><a href="">Atwood</a>
-    <ul> 
-    <li><a href="">Ground floor</a></li>
-    <li><a href="">History</a></li>
-    <li><a href="">Vision</a></li>
+
+      <li><a href="">Home</a></li>
+
+      <li><a href="">Atwood</a>
+        <ul> 
+          <li><a href="">Ground Floor</a></li>
+          <li><a href="">Second Floor</a></li>
+          <li><a href="">Third Floor</a></li>
+        </ul>
+      </li>
+
+      <li><a href="">North</a>
+        <ul>
+        <li><a href="">Ground Floor</a></li>
+        <li><a href="">Great Table</a></li>
+        <li><a href="">Small Chair</a></li>
+        <li><a href="">Shiny Shelf</a></li>
+        <li><a href="">Invisible Nothing</a></li>
+        </ul>
+      </li>
+
+      <li><a href="">Contact</a>
+        <ul>
+        <li><a href="">Online</a></li>
+        <li><a href="">Right Here</a></li>
+        <li><a href="">Somewhere Else</a></li>
+        </ul>
+      </li>
     </ul>
-  </li>
-  <li><a href="">Products</a>
-    <ul>
-    <li><a href="">Cozy Couch</a></li>
-    <li><a href="">Great Table</a></li>
-    <li><a href="">Small Chair</a></li>
-    <li><a href="">Shiny Shelf</a></li>
-    <li><a href="">Invisible Nothing</a></li>
-    </ul>
-  </li>
-  <li><a href="">Contact</a>
-    <ul>
-    <li><a href="">Online</a></li>
-    <li><a href="">Right Here</a></li>
-    <li><a href="">Somewhere Else</a></li>
-    </ul>
-  </li>
-</ul>
+  </div>
 
 <%= yield %>
+</div>
+
+<script type="text/javascript">
+  // console.log('hi');
+  // console.log($('area'));
+  (function() {
+    var puller = $('<span id=pull>Person</span>').insertBefore('.map');
+
+    $('area').on('mouseenter', function() {
+      // console.log(this);
+      $this = $(this);
+      $this.css('background-color', 'rgba(255,0,0,0.5)');
+      // $this.hide();
+      // $this.addClass('hover');
+      console.log($this);
+      // $this.siblings('area').removeClass('hover');
+  });
+})();
+</script>
 
 </body>
 </html>

@@ -17,11 +17,11 @@ ul li a {
   color: #ffffff;
   border-top: 1px solid #ffffff;
   padding: 5px 15px 5px 15px;
-  background: #2C5463;
+  background: #BC9A6A;
   margin-left: 1px;
   white-space: nowrap;
 }
-ul li a:hover { background: #617F8A; }
+ul li a:hover { background: rgb(92,60,32); }
 li:hover ul {
   display: block;
   position: absolute;
@@ -30,8 +30,5 @@ li:hover li {
   float: none;
   font-size: 11px;
 }
-li:hover a { background: #617F8A; }
-li:hover li a:hover { background: #95A9B1; }
-#nav {
-  
-}
+li:hover a { background: rgb(208,180,135); }
+li:hover li a:hover { background: ; }
