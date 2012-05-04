@@ -48,6 +48,9 @@ class UsersController < ApplicationController
       # POST /comments.json
       def create
         @user = @page.users.new(params[:user])
+        @dorm = session[:dorm]
+        @floor = session[:floor]
+        @number = session[:number]
 
         respond_to do |format|
           if @page.users.count >= @page.capacity  # if there no capacity left!
@@ -58,15 +61,14 @@ class UsersController < ApplicationController
               if i.roomDrawNumber > @user.roomDrawNumber
                 @user.save
                 i.destroy
-                format.html { redirect_to page_path(@page), notice: 'Your number was good enough to bump someone out!' }
+                format.html { redirect_to "/#{@dorm}/#{@floor}/#{@number}/", notice: 'Your number was good enough to bump someone out!' }
                 break
               end
-              format.html { redirect_to page_path(@page), notice: 'Your number is not good enough :(' }
+              format.html { redirect_to "/#{@dorm}/#{@floor}/#{@number}/", notice: 'Your number is not good enough :(' }
             end
 
           elsif @user.save
-            format.html { redirect_to page_path(@page), notice: 'User was successfully created.' }
-            format.json { render json: [@page, @user], status: :created, location: [@page, @user] }
+            format.html { redirect_to "/#{@dorm}/#{@floor}/#{@number}/", notice: 'User was successfully created.' }
           else
             format.html { render action: "new" }
             format.json { render json: @user.errors, status: :unprocessable_entity }

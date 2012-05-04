@@ -47,11 +47,12 @@ class CommentsController < ApplicationController
     # POST /comments.json
     def create
       @comment = @page.comments.new(params[:comment])
-
+      @dorm = session[:dorm]
+      @floor = session[:floor]
+      @number = session[:number]
       respond_to do |format|
         if @comment.save
-          format.html { redirect_to page_path(@page), notice: 'Comment was successfully created.' }
-          format.json { render json: [@page, @comment], status: :created, location: [@page, @comment] }
+          format.html { redirect_to "/#{@dorm}/#{@floor}/#{@number}/", notice: 'Comment was successfully created.' }
         else
           format.html { render action: "new" }
           format.json { render json: @comment.errors, status: :unprocessable_entity }

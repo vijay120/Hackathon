@@ -1,38 +1,64 @@
 <p id="notice"><%= notice %></p>
 
+<% session[:dorm] = params[:dorm]%>
+<% session[:floor] = params[:floor]%>
+<% session[:number] = params[:number]%>
 
 <table border="1" bordercolor="#000000" style="background-color:#BC9A6A; color: black; margin-left: 480px" width="400" cellpadding="3" cellspacing="3">
     <tr>
         <td>Dorm</td>
+		<td>Room Number</td>
+		<td>Capacity</td>
+    </tr>
+    <tr>
         <td><%= @page.dormName %></td>
-    </tr>
-    <tr>
-        <td>Room number</td>
         <td><%=@page.roomNumber%></td>
+		<td><%=@page.capacity%></td>
     </tr>
-    <tr>
-        <td>Capacity</td>
-        <td><%= @page.capacity%></td>
-    </tr>
+
 </table>
 
 <table border="1" bordercolor="#000000" style="background-color:#BC9A6A; color: black; margin-left: 480px" width="400" cellpadding="3" cellspacing="3">
-    <tr>
-        <td>First name</td>
-        <td><%= @user.firstName %></td>
+	
+	<tr>
+        <td>First Name</td>
+		<td>Last Name</td>
+		<td>Room draw number</td>
     </tr>
+	
+	<% @page.users.each do |i| %>
+		
     <tr>
-        <td>Last name</td>
-        <td><%=@user.lastName%></td>
+        <td><%= i.firstName %></td>
+        <td><%= i.lastName%></td>
+        <td><%= i.roomDrawNumber%></td>
     </tr>
-    <tr>
-        <td>Room draw number </td>
-        <td><%= @user.roomDrawNumberg%></td>
-    </tr>
+
+<%end%>
 </table>
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+
+<%= link_to 'New User', new_page_user_path(@page), :style => "color : white"%>
 
 
+<table border="1" bordercolor="#000000" style="background-color:#BC9A6A; color: black; margin-left: 480px" width="400" cellpadding="3" cellspacing="3">
+	
+	<tr>
+        <td>Comments</td>
+		<td>Name</td>
+    </tr>
+	
+	<% @page.comments.each do |i| %>
+		
+    <tr>
+        <td><%= i.description %></td>
+        <td><%= i.name%></td>
+    </tr>
+
+
+<%end%>
+</table>
+
+
+<%= link_to 'New Comment', new_page_comment_path(@page), :style => "color : white" %>
 
